@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página personal de Mónica Monserrat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <link rel="stylesheet" href="minimizadoCSSlab03.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -33,20 +34,71 @@
         </section>
 
         <section>
-            <!-- Sección de la imagen -->
-            <img 
-            src="FotoMon.png" 
-            alt="Foto Monica Monserrat Martinez Vasquez" 
-            width="300" 
-            height="300">
+            <!-- Barra de navegación -->
+            <nav class="navbar">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Conóceme...</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <!-- Imagen centrada y estilizada con Materialize -->
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="materialboxed responsive-img" src="FotoMon.png" alt="Mi Imagen">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video de YouTube con Materialize -->
+                <div class="row">
+                    <div class="col s12">
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9sVoglgJjRg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>            
 
             <!-- Botón de opción -->
             <div>
                 <p>¿Cómo está siendo tu día?</p>
-                <label><input type="radio" name="estado_dia" value="Triste"> Triste</label><br>
-                <label><input type="radio" name="estado_dia" value="Emocionante"> Emocionante</label><br>
-                <label><input type="radio" name="estado_dia" value="Estresante"> Estresante</label><br>
-                <label><input type="radio" name="estado_dia" value="Neutral"> Neutral</label><br>
+                <p>
+                    <label>
+                        <input class="with-gap" name="estado_dia" type="radio" value="Triste" />
+                        <span>Triste</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="estado_dia" type="radio" value="Emocionante" />
+                        <span>Emocionante</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="estado_dia" type="radio" value="Estresante" />
+                        <span>Estresante</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="estado_dia" type="radio" value="Neutral" />
+                        <span>Neutral</span>
+                    </label>
+                </p>
+            </div>
+             <!-- Botón flotante para volver al inicio -->
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large purple darken-4" href="#top">
+                    <i class="large material-icons">⤴</i>
+                </a>
             </div>
         </section>
 
@@ -760,7 +812,6 @@
                                     (Universidad Europea, 2022)
                                 </em>
                                 </dd>
-                                
                             <li>
                                 <dl>
                                     ¿Qué métodos tiene el objeto Date? (Menciona al menos 5)
@@ -894,9 +945,48 @@
                         </dl>
                     </li>
                 </ul>
+                <h2>
+                    Preguntas y respuestas del Laboratorio 5
+                </h2>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                Describe Material design
+                            </dt>
+                                <dd>
+                                    Material Design es un sistema de diseño creado por Google que se centra en la creación de 
+                                    interfaces de usuario claras, intuitivas y visualmente atractivas. Está basado en 
+                                    principios de diseño que buscan simular el comportamiento físico del mundo real, utilizando 
+                                    sombras, profundidad y movimiento para proporcionar una experiencia cohesiva y consistente 
+                                    en todas las plataformas y dispositivos. Algunas características importantes de Material 
+                                    Design incluyen:
+                                </dd>
+                                <dd>
+                                1. Diseño visual claro y limpio:
+                                </dd>
+                                <dd>
+                                2. Animaciones y transiciones fluidas:
+                                </dd>
+                                <dd>
+                                3. Componentes reutilizables y flexibles:
+                                </dd>
+                                <dd>
+                                4. Consistencia multiplataforma:
+                                </dd>
+                                <dd>
+                                <em>
+                                    (Material Design, n.d.)
+                                </em>
+                                </dd>
+                            </dt>
+                        </dl>        
+                    </li>
+                </ul>
         </section>
         <script src="Lab04.js"></script>
     </main>
+
     <footer>
         <div>
             <p>
@@ -1098,6 +1188,15 @@
                     <a href="https://ccia.ugr.es/~jfv/ed1/c/cdrom/cap6/cap62.htm">
                         https://ccia.ugr.es/~jfv/ed1/c/cdrom/cap6/cap62.htm
                     </a>
+                    Material design. (n.d.). Material Design. https://m3.material.io/
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    Material design. (n.d.). Material Design. Site:
+                    <a href="https://m3.material.io/">
+                        https://m3.material.io/
+                    </a>
                 </li>
             </dd>
         </dl>
@@ -1105,5 +1204,12 @@
             Derechos Reservados &copy; Mónica Monserrat Martínez Vásquez
         </p>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Inicializa los elementos de Materialize
+                M.AutoInit();
+            });
+        </script>
     </body>
 </html>
