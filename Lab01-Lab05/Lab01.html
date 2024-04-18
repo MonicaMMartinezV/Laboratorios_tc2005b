@@ -718,7 +718,188 @@
                         </dl>
                     </li>
                 </ul>
+                <h2>
+                    Preguntas y respuestas del Laboratorio 4
+                </h2>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+                            </dt>
+                                <dd>
+                                <strong>
+                                    Diferencias:
+                                </strong>
+                                Java es un lenguaje de programación de propósito general que se utiliza ampliamente para 
+                                el desarrollo de aplicaciones de escritorio, web y móviles, mientras que JavaScript es 
+                                un lenguaje de secuencias de comandos principalmente utilizado para el desarrollo web, 
+                                especialmente para agregar interactividad a las páginas web. Java es un lenguaje compilado 
+                                que se ejecuta en la máquina virtual Java (JVM), mientras que JavaScript es interpretado 
+                                y se ejecuta en un navegador web. Java es fuertemente tipado, lo que significa que debes 
+                                declarar el tipo de dato de cada variable, mientras que JavaScript es débilmente tipado, 
+                                lo que significa que las variables pueden contener diferentes tipos de datos sin necesidad 
+                                de declaración explícita de tipo. Además, Java es un lenguaje orientado a objetos puro, donde 
+                                todo es un objeto, mientras que JavaScript también es orientado a objetos pero también 
+                                admite programación funcional. También, Java tiene tipado estático, lo que significa que
+                                los tipos de datos se comprueban en tiempo de compilación, mientras que JavaScript tiene 
+                                tipado dinámico, lo que significa que los tipos de datos se comprueban en tiempo de ejecución.
+                                </dd>
+                                <dd>
+                                <strong>
+                                    Semejanzas:
+                                </strong>
+                                Ambos lenguajes comparten una sintaxis similar a C, lo que facilita la transición entre ellos. 
+                                Tienen estructuras de control de flujo similares, como bucles for, while, y condicionales if.
+                                Tanto Java como JavaScript tienen el concepto de objetos y métodos. Tienen soporte para manejo 
+                                de errores a través de excepciones. Se pueden utilizar para el desarrollo tanto en el lado 
+                                del cliente como en el servidor.
+                                </dd>
+                                <dd>
+                                <em>
+                                    (Universidad Europea, 2022)
+                                </em>
+                                </dd>
+                                
+                            <li>
+                                <dl>
+                                    ¿Qué métodos tiene el objeto Date? (Menciona al menos 5)
+                                </dl>
+                            </li>
+                                <dd>
+                                <strong>
+                                    1. getDate():
+                                </strong>
+                                Devuelve el día del mes (1-31).
+                                </dd>
+                                <dd>
+                                <strong>
+                                    2. getMonth():
+                                </strong>
+                                Devuelve el mes (0-11).
+                                </dd>
+                                <dd>
+                                <strong>
+                                    3. getFullYear():
+                                </strong>
+                                Devuelve el año (cuatro dígitos).
+                                </dd>
+                                <dd>
+                                <strong>
+                                    4. getHours():
+                                </strong>
+                                Devuelve la hora (0-23).
+                                </dd>
+                                <dd>
+                                <strong>
+                                    5. getMinutes()
+                                </strong>
+                                Devuelve los minutos (0-59).
+                                </dd>
+                                <dd>
+                                <em>
+                                    (AulaScript, 2021)
+                                </em>
+                                </dd>
+                            <li>
+                                <dl>
+                                    ¿Qué métodos tienen los arreglos? (Menciona al menos 5)
+                                </dl>
+                            </li>
+                                <dd>
+                                <strong>
+                                    1. push():
+                                </strong>
+                                Añade uno o más elementos al final del arreglo y 
+                                devuelve la nueva longitud del arreglo.
+                                </dd>
+                                <dd>
+                                <strong>
+                                    2. pop():
+                                </strong>
+                                Elimina el último elemento del arreglo y lo devuelve.
+                                </dd>
+                                <dd>
+                                <strong>
+                                    3. splice():
+                                </strong>
+                                Cambia el contenido de un arreglo eliminando elementos 
+                                existentes y/o agregando nuevos elementos.
+                                </dd>
+                                <dd>
+                                <strong>
+                                   4. forEach():
+                                </strong>
+                                Ejecuta una función dada una vez por cada elemento del 
+                                arreglo.
+                                </dd>
+                                <dd>
+                                <strong>
+                                    5. filter()
+                                </strong>
+                                Crea un nuevo arreglo con todos los elementos que 
+                                pasan la prueba implementada por la función proporcionada.
+                                </dd>
+                                <dd>
+                                <em>
+                                    (Zubikarai, 2022)
+                                </em>
+                                </dd>
+                            <li>
+                                <dl>
+                                    ¿Cómo se declara una variable con alcance local dentro de una función?
+                                </dl>
+                            </li>
+                            <dd>
+                                Se puede declarar una variable con alcance local dentro de una 
+                                función utilizando la palabra clave let o const. Por ejemplo:
+                                <dd>
+                                    <em>
+                                    function miFuncion() {
+                                        <dd>
+                                        let variableLocal = "Esta es una variable local";
+                                        </dd>
+                                        <dd>
+                                        const otraVariableLocal = "Esta es otra variable local";
+                                        </dd>
+                                        <dd>
+                                        // Resto del código...
+                                        </dd>
+                                        <dd>
+                                        }
+                                        </dd>
+                                    </em>                      
+                                </dd>       
+                            </dd>
+                            <li>
+                                <dl>
+                                    ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+                                </dl>
+                            </li>
+                            <dd>
+                                Las variables globales pueden ser accedidas y modificadas desde cualquier lugar en el código,
+                                lo que puede hacer más difícil rastrear los cambios en el programa y comprender su 
+                                comportamiento. Puede haber conflictos de nombres si se utilizan variables globales con
+                                nombres similares en diferentes partes del código, lo que puede conducir a errores difíciles 
+                                de depurar. Utilizar variables globales en exceso puede llevar a una mala organización del 
+                                código y hacer que sea más difícil de mantener y ampliar. Si una función modifica una variable
+                                global, puede tener efectos secundarios inesperados en otras partes del programa, lo que dificulta 
+                                la depuración y el mantenimiento del código.
+                            </dd>
+                            <dd>
+                            <em>
+                                (www2, n.d.)(Morales, n.d.)
+                            </em>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+
+
+
         </section>
+        <script src="Lab04.js"></script>
     </main>
 
     <footer>
@@ -883,9 +1064,51 @@
                     </a>
                 </li>
             </dd>
+            <dd>
+                <li>
+                    Universidad Europea (2022, August 8). Diferencias entre Java y JavaScript. Site: 
+                    <a href="https://universidadeuropea.com/blog/diferencias-entre-java-y-javascript/">
+                        https://universidadeuropea.com/blog/diferencias-entre-java-y-javascript/
+                    </a>
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    AulaScript (2021). Referencia objeto Date. AulaScript, JavaScript desde cero. Site: 
+                    <a href="https://www.aulascript.com/lenguaje/objetos/date/index.htm">
+                        https://www.aulascript.com/lenguaje/objetos/date/index.htm
+                    </a>
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    Zubikarai, S. (2022, January 12). Manual de arreglos en JavaScript: Métodos de 
+                    arreglos de JS explicados con ejemplos. freeCodeCamp.org. Site:
+                    <a href="https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/">
+                        https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/
+                    </a>
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    www2 (n.d.). Ámbito de las variables — Fundamentos de Programación en C++. Site:
+                    <a href="https://www2.eii.uva.es/fund_inf/cpp/temas/2_tipos_variables/ambito_variables.html">
+                        https://www2.eii.uva.es/fund_inf/cpp/temas/2_tipos_variables/ambito_variables.html
+                    </a>
+                </li>
+            </dd>
+            <dd>
+                <li>
+                    Morales, J. I. S. (n.d.). Variables locales y globales. Site:
+                    <a href="https://ccia.ugr.es/~jfv/ed1/c/cdrom/cap6/cap62.htm">
+                        https://ccia.ugr.es/~jfv/ed1/c/cdrom/cap6/cap62.htm
+                    </a>
+                </li>
+            </dd>
         </dl>
         <p id="derechos">
             Derechos Reservados &copy; Mónica Monserrat Martínez Vásquez
         </p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>
