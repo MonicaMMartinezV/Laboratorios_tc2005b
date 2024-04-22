@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Validator</title>
+<link rel="stylesheet" href="Lab06Style.css">
+<style>
+    .shadow-text {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+</style>
+</head>
+<body>
+    <form id="passwordForm">
+        <h2>Password Validator</h2>
+        <input type="password" id="password" name="password">
+        <span id="passwordHelp" style="color: #888;"></span><br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <span id="confirmPasswordHelp" style="color: #888;"></span><br><br>
+        <div id="passwordStrength"></div>
+        <div id="strengthIndicator"></div>
+        <button type="submit" id="submitButton" disabled>Submit</button>
+    </form>
+
+    <script src="Lab06.js"></script>
+    <script>
+        function changeHelpText(elementId, newText) {
+            document.getElementById(elementId).textContent = newText;
+        }
+        document.getElementById('password').addEventListener('mouseover', function() {
+            changeHelpText('passwordHelp', 'Ingrese una contraseña segura. Debe contener al menos 8 caracteres.');
+        });
+        document.getElementById('password').addEventListener('mouseout', function() {
+            changeHelpText('passwordHelp', '');
+        });
+        document.getElementById('confirmPassword').addEventListener('mouseover', function() {
+            changeHelpText('confirmPasswordHelp', 'Por favor, confirme su contraseña.');
+        });
+        document.getElementById('confirmPassword').addEventListener('mouseout', function() {
+            changeHelpText('confirmPasswordHelp', '');
+        });
+    </script>
+</body>
+</html>

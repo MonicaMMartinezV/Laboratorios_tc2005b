@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de productos de belleza y skincare</title>
+    <link rel="stylesheet" href="Lab06ej2Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tienda de productos de belleza y skincare</h1>
+        <div class="product">
+            <img src="sunscreen.jpg" alt="Bloqueador solar de Loreal">
+            <h2>Bloqueador solar de Loreal</h2>
+            <p>Precio: $190.58</p>
+            <label for="sunscreen">Cantidad:</label>
+            <input type="number" id="sunscreen" min="0">
+        </div>
+        <div class="product">
+            <img src="moisturizer.jpg" alt="Crema hidratante de Cetaphil">
+            <h2>Crema hidratante de Cetaphil</h2>
+            <p>Precio: $310.51</p>
+            <label for="moisturizer">Cantidad:</label>
+            <input type="number" id="moisturizer" min="0">
+        </div>
+        <div class="product">
+            <img src="serum.jpg" alt="Serum con ácido hialurónico de la Roche">
+            <h2>Serum con ácido hialurónico de la Roche</h2>
+            <p>Precio: $1256.89</p>
+            <label for="serum">Cantidad:</label>
+            <input type="number" id="serum" min="0">
+        </div>
+        <div class="total">
+            <h2>Total</h2>
+            <p id="totalPrice">Precio Total: $0.00</p>
+            <p id="iva">IVA (19%): $0.00</p>
+            <button onclick="calcularTotal()">Calcular Total</button>
+        </div>
+    </div>
+    </div>
+    <div class="questions">
+        <h2>Preguntas y respuestas del Laboratorio 6</h2>
+        <ol>
+            <li>¿Por qué es una buena práctica usar JavaScript para chequear que sean válidos los inputs de las formas antes de enviar los datos al servidor?
+                <dd>Es buena practica porque mejora la experiencia del usuario al proporcionar retroalimentación inmediata sobre posibles errores en los datos ingresados. Reduce la carga en el servidor al evitar enviar datos no válidos y Puede ayudar a prevenir ataques de seguridad al filtrar datos maliciosos antes de enviarlos al servidor</dd>
+            </li>
+            <li>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
+                <dd>Puedes desactivar JavaScript en tu navegador, modificar el código JavaScript del cliente para evitar o eludir las validaciones. Además, puedes enviar datos directamente al servidor sin utilizar el formulario HTML o enviar datos directamente al servidor sin utilizar el formulario HTML</dd>
+            <li>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</li>
+                <dd>Porque aun así proporcionan una primera línea de defensa contra errores de entrada comunes.
+                    Además, ayudan a mejorar la experiencia del usuario al proporcionar retroalimentación inmediata, y aunque, no pueden evitar todos los ataques, pueden disuadir a los atacantes menos sofisticados y reducir el riesgo de errores accidentales.</dd>
+        </ol>
+    </div>
+    <div class="references">
+        <h2>Referencias</h2>
+        <li>JavaScript DOM navigation. (n.d.). https://www.w3schools.com/js/js_htmldom_navigation.asp</li>
+        <li>freeCodeCamp.org. (2018, October 22). What’s the Document Object Model, and why you should know how to use it. https://www.freecodecamp.org/news/whats-the-document-object-model-and-why-you-should-know-how-to-use-it-1a2d0bc5429d/</li>
+        <li>Wilkins, J. (2021, September 27). What is the DOM? Document Object Model Meaning in JavaScript. freeCodeCamp.org. https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/</li>
+        <li>HTML Event Attributes. (n.d.). https://www.w3schools.com/tags/ref_eventattributes.asp</li>
+        <li>uniwebsidad. (n.d.). 7.3. Validación (Introducción a JavaScript). Uniwebsidad. https://uniwebsidad.com/libros/javascript/capitulo-7/validacion</li>
+        <li>Ciordia, N. G. (2021, December 16). Validación Básica de Formularios en JavaScript. freeCodeCamp.org. https://www.freecodecamp.org/espanol/news/validacion-basica-de-formularios-en-javascript/</li>
+        <li>Ada. (2020, September 12). Cómo saltarse la validación HTML5 de un formulario. https://didacticode.com/como-saltarse-validacion-html5-formulario/</li>
+        <li>Ada. (2020, July 12). ¿Es seguro validar un formulario con Javascript? https://didacticode.com/seguro-validar-formulario-javascript/</li>
+        <li>Validación de formularios de datos - Aprende desarrollo web | MDN. (2023, September 1). MDN Web Docs. https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation</li>
+    </div>
+    <script src="Lab06ej2.js"></script>
+</body>
+</html>
