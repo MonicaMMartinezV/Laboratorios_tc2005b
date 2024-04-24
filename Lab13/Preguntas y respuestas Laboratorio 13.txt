@@ -1,0 +1,11 @@
+¿Qué beneficios encuentras en el estilo MVC?
+Separa la lógica de negocio (Modelo), la presentación de la información (Vista) y la lógica de control (Controlador). Esto facilita el mantenimiento del código y permite a los desarrolladores trabajar en diferentes aspectos de la aplicación de manera independiente. Además, al dividir la aplicación en componentes distintos, es más fácil reutilizar código en diferentes partes del proyecto. También, dado que las responsabilidades están claramente definidas, es más fácil para los equipos de desarrollo colaborar en un proyecto utilizando el estilo MVC. Por último, es más sencillo realizar pruebas unitarias y de integración, lo que conduce a un código más robusto y menos propenso a errores.
+
+¿Encuentras alguna desventaja en el estilo arquitectónico MVC?
+Implementar el patrón MVC puede requerir un mayor esfuerzo inicial para comprender cómo dividir la aplicación en modelos, vistas y controladores adecuados. Esto puede resultar en una curva de aprendizaje más pronunciada para los desarrolladores nuevos en el estilo MVC.
+En cuanto a la posible sobrecarga, en aplicaciones pequeñas o simples, el uso completo del patrón MVC puede parecer excesivo y llevar a una sobrecarga de abstracción y estructura. En tales casos, podría ser más eficiente utilizar un enfoque más simple.
+Respecto al acoplamiento entre capas, aunque MVC ayuda a reducir el acoplamiento entre la lógica de negocio, la presentación y el control, aún puede haber cierto grado de acoplamiento entre estas capas, especialmente si no se implementa correctamente.
+
+Referencias
+- SEOPRO Marketing Online SL. (2021, October 28). ▷ ¿Qué es MVC y cuáles son sus ventajas? SEOPRO Marketing Online SL. Site: https://seopromarketing.online/que-es-mvc-ventajas/
+- Patrón Modelo Vista Controlador | Marco de Desarrollo de la Junta de Andalucía. (n.d.). https://www.juntadeandalucia.es/servicios/madeja/contenido/recurso/122
