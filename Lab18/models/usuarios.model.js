@@ -10,7 +10,7 @@ exports.login = function(correo,contrasena){
     };
 }
 
-module.exports = class User {
+exports.User = class {
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
     constructor(my_username, my_name, my_password) {
         this.username = my_username;
@@ -43,26 +43,5 @@ module.exports = class User {
         } catch (error) {
             throw error; // Re-throw the error for proper handling
         }
-    }
-}
-
-module.exports.get_logged = async(req,res) =>{
-    try {
-        const usuarios = await model.User.findUser(req.session.username)
-        if(usuarios.length < 1){
-            res.render("usuarios/registro",{
-                registro: false
-            });
-            return;
-        }
-
-        const usuario = usuarios[0];
-        res.render('usuarios/logged',{
-            user:usuario
-        });
-    }catch (error){
-        res.render("usuarios/registro",{
-            registro: false
-        });
     }
 }

@@ -1,14 +1,13 @@
 
-const bcrypt = require('bcryptjs');
-
 const mariadb = require("mariadb");
 
 const pool = mariadb.createPool({
     host:"127.0.0.1",
     user:"root",
-    password:"root",
+    password:"1002151513",
     database: "users_test",
-    connectionLimit:5
+    connectionLimit:5,
+    port:3308
 });
 
 module.exports = async () => {

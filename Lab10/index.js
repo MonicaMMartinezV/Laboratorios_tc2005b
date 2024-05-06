@@ -74,6 +74,18 @@ const server = http.createServer( (request, response) => {
             }
         break;
 
+        case "/labNew":
+            if (request.method == "GET") {
+                response.setHeader('Content-Type', 'text/plain');
+                response.write("URL labNew GET");
+                response.end();
+            } else if (request.method == "POST") {
+                response.setHeader('Content-Type', 'text/plain');
+                response.write("URL labNew POST");
+                response.end();
+            }
+        break;
+
         default:
             response.statusCode = 404;
             response.end();
