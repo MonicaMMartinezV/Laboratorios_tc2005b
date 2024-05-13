@@ -14,16 +14,16 @@ router.post('/form_method', (request, response, next) => {
     const indice = Number(request.body.indice);
     console.log(indice);
     const imprimir = request.body.imprimir
-    console.log(imprimir);
-
-    for(var i = 1; i <= indice; i++){
-        console.log(imprimir)
-    }
-
-    response.setHeader('Content-Type', 'application/json');
-    response.statusCode = 200;
-    response.write('{code:200, msg:"Ok POST"}');
-    response.end();
+    // Guardar los datos en un archivo de texto
+    fs.appendFile('datos.txt', `${indice}: ${imprimir}\n`, (err) => {
+        if (err) {
+            console.error('Error al guardar los datos:', err);
+            return response.status(500).send('Error interno del servidor');
+        }
+        console.log('Datos guardados correctamente');
+        response.status(200).send('Datos guardados correctamente');
+    });
 });
+
 
 module.exports = router;
