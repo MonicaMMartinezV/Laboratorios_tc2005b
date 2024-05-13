@@ -98,13 +98,13 @@ module.exports.get_logged = async(req,res) =>{
     }
 }
 
-    module.exports.logout = async (req, res) => {
-        req.session.permisos = '';
-        req.session.username = '';
-        req.session.isLoggedIn = false;
-        res.send("El usuario ha cerrado sesión");
-    }
+module.exports.logout = async (req, res) => {
+    req.session.permisos = '';
+    req.session.username = '';
+    req.session.isLoggedIn = false;
+    res.send("El usuario ha cerrado sesión");
+}
 
-    module.exports.editar_usuario = async (req, res) => {
-        res.send("El usuario tiene permisos para entrar a esta vista");
-    }
+module.exports.editar_usuario = async (req, res) => {
+    res.send("El usuario tiene permisos para entrar a esta vista");
+}
