@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de productos de belleza y skincare</title>
+    <link rel="stylesheet" href="/Lab06ej2Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tienda de productos de belleza y skincare</h1>
+        <div class="product">
+            <img src="/moisturizer.jpg" alt="Crema hidratante de Cetaphil">
+            <h2>Crema hidratante de Cetaphil</h2>
+            <p>Precio: $310.51</p>
+            <label for="moisturizer">Cantidad:</label>
+            <input type="number" id="moisturizer" min="0">
+        </div>
+        <div class="product">
+            <img src="/serum.jpg" alt="Serum con ácido hialurónico de la Roche">
+            <h2>Serum con ácido hialurónico de la Roche</h2>
+            <p>Precio: $1256.89</p>
+            <label for="serum">Cantidad:</label>
+            <input type="number" id="serum" min="0">
+        </div>
+        <div class="product">
+            <img src="/sunscreen.jpg" alt="Bloqueador solar de Loreal">
+            <h2>Bloqueador solar de Loreal</h2>
+            <p>Precio: $190.58</p>
+            <label for="sunscreen">Cantidad:</label>
+            <input type="number" id="sunscreen" min="0">
+        </div>
+        <div class="total">
+            <h2>Total</h2>
+            <p id="totalPrice">Precio Total: $0.00</p>
+            <p id="iva">IVA (19%): $0.00</p>
+            <button onclick="calcularTotal()">Calcular Total</button>
+        </div>
+    </div>
+    <script src="/Lab06ej2.js"></script>
+</body>
+</html>
+
