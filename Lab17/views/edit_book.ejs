@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Libro</title>
+</head>
+<body>
+    <h1>Editar Libro</h1>
+    <form action="/edit_book/<%= book.BookID %>" method="POST">
+        <label for="title">Título:</label><br>
+        <input type="text" id="title" name="title" value="<%= book.Title %>" required><br><br>
+        <input type="submit" value="Guardar Cambios">
+    </form>
+</body>
+</html>

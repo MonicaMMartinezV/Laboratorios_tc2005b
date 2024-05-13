@@ -1,0 +1,18 @@
+<html>
+<head>
+    <%- include('./../css.ejs') %>
+</head>
+<body>
+    <h1>Iniciar sesión</h1>
+    <form action="/usuarios/login" method="post">
+        <label for="user">Usuario:</label>
+        <input type="text" id="user" name="user" value="
+        <%- typeof user !== 'undefined' ? user : '' %>" required><br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" value="
+        <%- typeof pass !== 'undefined' ? pass : '' %>" required><br><br>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</body>
+<%- include('./../scripts.ejs') %>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventajas de escribir código SQL en la capa del modelo y prevención de SQL injection</title>
+</head>
+<body>
+    <h1>Ventajas de escribir código SQL únicamente en la capa del modelo:</h1>
+    <ul>
+        <li><strong>Separación de responsabilidades:</strong> Al escribir el código SQL únicamente en la capa del modelo, se sigue el principio de separación de responsabilidades, lo que significa que cada componente del sistema tiene un rol específico y claro. La capa del modelo se encarga de interactuar con la base de datos, mientras que otras capas, como la capa de controladores o la capa de vistas, se encargan de la lógica de la aplicación y la presentación de datos, respectivamente.</li>
+        <li><strong>Reutilización de código:</strong> Al centralizar el código SQL en la capa del modelo, se facilita la reutilización del mismo código en diferentes partes de la aplicación. Esto puede ser útil cuando se necesitan realizar operaciones similares en diferentes partes de la aplicación.</li>
+        <li><strong>Abstracción de la base de datos:</strong> Escribir el código SQL en la capa del modelo permite abstraer los detalles específicos de la base de datos subyacente. Esto significa que los otros componentes de la aplicación no necesitan preocuparse por los detalles de implementación de la base de datos, lo que facilita el mantenimiento y la escalabilidad del sistema.</li>
+    </ul>
+
+    <h1>SQL injection y cómo prevenirlo:</h1>
+    <h2>¿Qué es SQL injection?</h2>
+    <p>SQL injection es una vulnerabilidad de seguridad que permite a un atacante ejecutar código SQL malicioso en una aplicación web al manipular los parámetros de entrada que se utilizan en consultas SQL. Esto puede conducir a la modificación no autorizada de datos, la divulgación de información confidencial o la ejecución de acciones no deseadas en la base de datos.</p>
+    
+    <h2>Cómo prevenir SQL injection:</h2>
+    <ol>
+        <li><strong>Usar consultas parametrizadas o preparadas:</strong> Utilizar consultas parametrizadas o preparadas es la forma más efectiva de prevenir SQL injection. Estas consultas separan los datos del código SQL y los envían a la base de datos como parámetros, evitando así la posibilidad de inyectar código malicioso.</li>
+        <li><strong>Validar y sanitizar la entrada de usuario:</strong> Es importante validar y sanitizar cualquier entrada de usuario antes de utilizarla en consultas SQL. Esto puede incluir la verificación de tipos de datos esperados, la limitación de la longitud de entrada y la eliminación de caracteres especiales que podrían ser utilizados en ataques de inyección.</li>
+        <li><strong>Limitar los privilegios de la cuenta de base de datos:</strong> Asegúrate de que las cuentas de base de datos utilizadas por la aplicación tengan los privilegios mínimos necesarios para realizar las operaciones requeridas. Esto reduce el impacto potencial de un ataque de SQL injection al limitar las acciones que pueden llevarse a cabo en la base de datos.</li>
+        <li><strong>Utilizar un firewall de aplicaciones web (WAF):</strong> Los WAF pueden ayudar a detectar y prevenir ataques de SQL injection mediante la inspección del tráfico web y la identificación de patrones de ataque conocidos.</li>
+        <li><strong>Mantener la aplicación actualizada:</strong> Asegúrate de mantener la aplicación y todos los componentes relacionados actualizados con los últimos parches de seguridad y actualizaciones de software. Esto puede ayudar a mitigar las vulnerabilidades conocidas que podrían ser explotadas en ataques de SQL injection.</li>
+    </ol>
+</body>
+</html>
