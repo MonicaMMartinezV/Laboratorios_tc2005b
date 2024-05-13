@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir Archivos</title>
+</head>
+<body>
+  <h1>Subir Archivo</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Subir</button>
+  </form>
+
+  <div class="container">
+    <h1>Multipart File Private Upload</h1>
+    <form action="/upload_file_private" method="POST" enctype="multipart/form-data" id="form">
+      <div class="input-group">
+        <label for="files">Select files</label>
+        <input id="file" name="file" type="file" />
+      </div>
+      <button class="submit-btn" type="submit">Upload</button>
+    </form>
+  </div>
+
+  <!-- Agrega un enlace para redirigir al usuario a la página de edición -->
+  <h1>Editar Archivo</h1>
+  <a href="/edit.html">Editar Archivo</a>
+</body>
+</html>

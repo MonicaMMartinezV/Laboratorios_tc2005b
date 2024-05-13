@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Archivo</title>
+</head>
+<body>
+  <h1>Crear Archivo</h1>
+  <form action="/create_file" method="POST">
+    <label for="fileName">Nombre del Archivo:</label>
+    <input type="text" id="fileName" name="fileName" required><br><br>
+    <label for="content">Contenido:</label><br>
+    <textarea id="content" name="content" rows="4" cols="50" required></textarea><br><br>
+    <button type="submit">Crear Archivo</button>
+    <button type="button" onclick="cancelCreate()">Cancelar</button>
+  </form>
+
+  <script>
+    function cancelCreate() {
+      // Redirigir al usuario de regreso a la página de subida de archivos
+      window.location.href = "/index.html";
+    }
+  </script>
+</body>
+</html>
+
