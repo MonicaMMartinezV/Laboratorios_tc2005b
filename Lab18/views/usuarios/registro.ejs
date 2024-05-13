@@ -5,6 +5,7 @@
     <body>
         <h2 class="title"><% if (registro) { %>¡Únete al lado oscuro, tenemos galletas!<% } else { %>Bienvenido<% } %></h2>
         <form action="/usuarios/<% if (registro) { %>registro<% } else { %>login<% } %>" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >    
             <label class="label" for="username">Nombre de usuario</label>
             <input class="input text" id="username" name="username">
             <% if (registro) { %>

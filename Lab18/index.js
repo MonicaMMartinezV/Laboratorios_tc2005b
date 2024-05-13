@@ -20,6 +20,13 @@ app.use(session({
   saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
 }));
 
+const csrf = require('csurf');
+const csrfProtection = csrf();
+app.use(csrfProtection);
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
 
 app.get('/', (request, response, next) => {
     response.setHeader('Content-Type', 'text/plain');
