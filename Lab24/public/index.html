@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <title>AJAX Consumption</title>
     <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-
   </head>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+    }
+    h1, h2 {
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        background: #f4f4f4;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+  </style>
   <body>
     <h1>AJAX consumption</h1>
 
@@ -22,7 +45,46 @@
     <button id="updateProducts">Update Products</button>
     <code id="codeResult"></code>
     <div id="wrapper"></div>
+
+    <button onclick="window.location.href='#respuestas'">Ver respuestas a preguntas</button>
+
+    <div id="respuestas" style="display:none;">
+      <h2>Respuestas a las preguntas</h2>
+      <p><strong>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</strong></p>
+      <p>AJAX (Asynchronous JavaScript and XML) es crucial en el desarrollo de RIA's porque permite la creación de aplicaciones web que pueden actualizarse de manera asíncrona mediante la comunicación con el servidor en segundo plano. Esto significa que partes de una página web pueden actualizarse sin necesidad de recargar toda la página, lo que mejora significativamente la experiencia del usuario al hacerla más rápida y fluida. Las principales ventajas incluyen interactividad mejorada, eficiencia en la comunicación y mejora en la experiencia del usuario. Las principales ventajas incluyen:</p>
+      <ul>
+        <li><strong>Interactividad Mejorada:</strong> Las RIA's pueden ofrecer una experiencia de usuario similar a las aplicaciones de escritorio, con interacciones más rápidas y sin interrupciones.</li>
+        <li><strong>Eficiencia en la Comunicación:</strong> AJAX permite la transferencia de datos específicos entre el cliente y el servidor, en lugar de recargar toda la página, lo que reduce el consumo de ancho de banda y tiempos de respuesta.</li>
+        <li><strong>Mejora en la Experiencia del Usuario:</strong> La posibilidad de actualizar solo partes específicas de la página sin interrupciones mejora la usabilidad y la satisfacción del usuario.</li>
+      </ul>
+      <p><strong>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</strong></p>
+      <p>AJAX introduce varias implicaciones de seguridad, como la exposición de datos, inyección de scripts (XSS) y manipulación de peticiones. Las validaciones de seguridad deben hacerse del lado del servidor, ya que el servidor tiene control completo sobre la validación y el procesamiento de los datos, lo que reduce el riesgo de manipulación, protege contra ataques y garantiza la integridad de los datos: </p>
+      <ul>
+        <li><strong>Exposición de Datos:</strong> Como AJAX envía y recibe datos en segundo plano, puede exponer información sensible si no se maneja adecuadamente.</li>
+        <li><strong>Inyección de Scripts (XSS):</strong> Los datos dinámicos recibidos del servidor pueden ser utilizados para inyectar scripts maliciosos en la página.</li>
+        <li><strong>Manipulación de Peticiones:</strong> Los atacantes pueden interceptar y manipular las peticiones AJAX para enviar datos maliciosos al servidor.</li>
+      </ul>
+      <h2>Validaciones de Seguridad: Cliente vs. Servidor</h2>
+        <p>Las validaciones de seguridad deben hacerse del lado del servidor. Aunque las validaciones del lado del cliente son importantes para mejorar la experiencia del usuario (por ejemplo, verificando datos antes de enviar una petición), estas no deben ser consideradas seguras ya que pueden ser fácilmente eludidas por atacantes. Las validaciones en el servidor son cruciales porque:</p>
+        <ul>
+            <li><strong>Control Total:</strong> El servidor tiene control completo sobre la validación y el procesamiento de los datos, reduciendo el riesgo de manipulación.</li>
+            <li><strong>Protección Contra Ataques:</strong> Validaciones en el servidor protegen contra inyecciones de SQL, XSS, y otras vulnerabilidades.</li>
+            <li><strong>Integridad de Datos:</strong> Garantizan que los datos enviados por el cliente cumplen con los requisitos de la aplicación antes de ser procesados o almacenados.</li>
+        </ul>
+      <p><strong>¿Qué es JSON?</strong></p>
+      <p>JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos que es fácil de leer y escribir para los humanos y fácil de parsear y generar para las máquinas. Es ampliamente utilizado en aplicaciones web para enviar y recibir datos entre el cliente y el servidor debido a su simplicidad y flexibilidad. JSON utiliza una sintaxis basada en texto y es independiente del lenguaje de programación, lo que lo hace adecuado para comunicarse entre diferentes sistemas. Es más ligero y rápido que otros formatos de intercambio de datos, como XML. Sus características principales incluyen:</p>
+      <ul>
+        <li><strong>Sintaxis Simple:</strong> Utiliza una sintaxis basada en texto que es fácil de entender y escribir.</li>
+        <li><strong>Interoperabilidad:</strong> JSON es independiente del lenguaje de programación, lo que lo hace adecuado para comunicarse entre diferentes sistemas.</li>
+        <li><strong>Eficiencia:</strong> Es más ligero y rápido que otros formatos de intercambio de datos, como XML.</li>
+      </ul>  
+    </div>
   </body>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+<script>
+  document.querySelector("button[onclick]").addEventListener("click", function() {
+    document.getElementById("respuestas").style.display = "block";
+  });
+</script>
 </html>
